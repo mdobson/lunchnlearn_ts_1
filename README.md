@@ -1,5 +1,7 @@
 # Matt's Lunch and Learn on Typescript!
 
+![The Joys of Typescript](./doc/ts_lmao.png)
+
 This is an interactive lunch and learn with some tips to consider for your typescript development. This also serves as a very basic harness for investigating typescript on a deeper level. I've purposefully setup the compiler options to be minimial and highly up to date. Consider this a sandbox to learn typescript, play around with the tooling, and check out what typescript emits from the compiler.
 
 ## Getting Started
