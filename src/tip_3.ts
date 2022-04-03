@@ -40,3 +40,30 @@ const hmmmA3dVector: Vector3D = {
 };
 
 console.log(multiply2DVector(hmmmA3dVector, 2));
+
+//You can structurally type function behavior too!
+interface Widgeter {
+  widgeting: (input: number) => string;
+}
+
+const widget = {
+  widgeting: (input: number): string => `widgets!!! ${input}`,
+};
+
+class WidgetClass {
+  private secondInput: number;
+  constructor() {
+    this.secondInput = 5;
+  }
+
+  public widgeting(input: number): string {
+    return `widgets input: ${input} class state: ${this.secondInput}`;
+  }
+}
+
+const doSomeWidgeting = (w: Widgeter, input: number): void => {
+  console.log(w.widgeting(input));
+};
+
+doSomeWidgeting(widget, 3);
+doSomeWidgeting(new WidgetClass(), 3);
