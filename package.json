@@ -1,0 +1,28 @@
+{
+  "name": "lunchnlearn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "exe:tip_1": "ts-node src/tip_1.ts",
+    "exe:tip_2": "ts-node src/tip_2.ts",
+    "exe:tip_3": "ts-node src/tip_3.ts",
+    "exe:tip_4": "ts-node src/tip_4.ts",
+    "exe:tip_5": "ts-node src/tip_5.ts",
+    "exe:tip_6": "ts-node src/tip_6.ts",
+    "exe:tip_7": "ts-node src/tip_7.ts",
+    "exe:tip_8": "ts-node src/tip_8.ts",
+    "build": "tsc -p tsconfig.json",
+    "prebuild": "npm run clean",
+    "clean": "rm -rf build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
