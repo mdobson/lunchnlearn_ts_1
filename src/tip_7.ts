@@ -11,13 +11,27 @@ interface Contact {
 //Manipulate parameters on a base type
 type ContactDTO = Readonly<Contact>;
 
-type UpdateContactNameDTO = Pick<
-  ContactDTO,
-  "first_name" | "last_name" | "middle_name"
+type UpdateContactNameDTO = Partial<
+  Pick<ContactDTO, "first_name" | "last_name" | "middle_name">
 >;
 
-type UpdateBirthdayDTO = Readonly<
-  Omit<Contact, "first_name" | "middle_name" | "last_name">
+const updateOne: UpdateContactNameDTO = {
+  first_name: "Matty",
+  last_name: "Dobs",
+  middle_name: "Shawn!",
+};
+
+const updateTwo: UpdateContactNameDTO = {
+  first_name: "Matty",
+  last_name: "Dobs",
+};
+
+//Uncomment below to see a readonly error
+//updateOne.first_name = "Zach";
+
+type UpdateBirthdayDTO = Omit<
+  ContactDTO,
+  "first_name" | "middle_name" | "last_name"
 >;
 
 //You can extract types from unions where it makes sense
